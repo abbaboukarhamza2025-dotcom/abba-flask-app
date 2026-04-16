@@ -1,0 +1,19 @@
+# Historique des commandes TP1 - Docker
+
+# 1. Construction de l'image
+docker build -t abba-flask-app .
+
+# 2. Lancement du conteneur
+docker run -d -p 5000:5000 --name mon-flask abba-flask-app
+
+# 3. Vérification du conteneur en cours d'exécution
+docker ps
+
+# 4. Connexion à DockerHub
+docker login
+
+# 5. Tag de l'image
+docker tag abba-flask-app TON_USERNAME/abba-flask-app
+
+# 6. Push vers DockerHub
+docker push TON_USERNAME/abba-flask-app
